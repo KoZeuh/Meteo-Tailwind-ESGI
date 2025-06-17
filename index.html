@@ -1,38 +1,57 @@
 <!DOCTYPE html>
-  <html lang="fr">
-
+<html lang="fr">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Meteo-Tailwind-ESGI</title>
-      <link rel="stylesheet" href="output.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meteo-Tailwind-ESGI</title>
+    <link rel="stylesheet" href="output.css" />
   </head>
 
   <body>
-    <nav>
+    <nav></nav>
 
-    </nav>
-    <!-- Première card -->
-    <div>
-    </div>
+    <!-- container -->
+    <div class="containergit  mx-auto">
+      <!-- Première card -->
+      <div
+        class="w-full flex rounded-xl p-5 bg-gradient-to-r from-indigo-500 to-purple-500 text-white"
+      >
+        <div class="w-[90%]">
+          <p class="text-xl ps-8">Paris, France</p>
+          <p class="text-sm t ps-8 pt-3">Merci, 16 décembre 2024</p>
 
-    <!-- Seconde card -->
-    <div>
-    </div>
-
-    <!-- Troisième -->
-     <div></div>
-
-     <!-- Dernière -->
-      <div>
+          <div class="flex flex-row gap-3 pt-4">
+            <p class="text-5xl ps-8">22°</p>
+            <div class="flex flex-col justify-center">
+              <p class="text-md">Ensoleillé</p>
+              <p class="text-sm">Ressenti 25°</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-[10%] text-center flex flex-col float-end mx-auto">
+          <i
+            data-lucide="sun-medium"
+            class="w-20 h-20 text-center mx-auto text-yellow-300 fill-yellow-300"
+          ></i>
+          <p class="text-xs pt-3 ps-6">Max: 26°</p>
+          <p class="text-xs ps-6">Min: 18°</p>
+        </div>
       </div>
 
-      
-    <i data-lucide="circle" class="text-gray-200 fill-red-600"></i>
+      <!-- Seconde card -->
+      <div></div>
+
+      <!-- Troisième -->
+      <div></div>
+
+      <!-- Dernière -->
+      <div></div>
+    </div>
+
+    <!-- <i data-lucide="circle" class="text-gray-200 fill-red-600"></i> -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
     </script>
   </body>
-
 </html>
