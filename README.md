@@ -53,6 +53,7 @@ Feel free to send us feedback -> [file an issue](https://github.com/KoZeuh/Meteo
 ## Contributors
 
 [@KoZeuh](https://github.com/KoZeuh)
+[@tibaaault](https://github.com/tibaaault)
 
 ## Build Process
 
