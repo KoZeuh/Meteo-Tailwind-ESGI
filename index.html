@@ -5,43 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meteo-Tailwind-ESGI</title>
     <link rel="stylesheet" href="output.css" />
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
   </head>
 
   <body class="bg-gray-200">
     <nav class="bg-white shadow-sm">
       <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
-        <!-- Icône soleil + fond en arrière de l'icône -->
+        <!-- Logo et titre -->
         <div class="flex items-center space-x-3">
           <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
             <i data-lucide="sun" class="w-5 h-5"></i>
           </div>
+
           <span class="text-2xl font-semibold">WeatherPro</span>
         </div>
 
-        <!-- Input de recherche + l'icône des paramètres -->
-        <div class="flex items-center space-x-4">
-          <!-- Champ de recherche (écran d'ordinateur uniquement) -->
-          <div class="hidden md:block relative">
-            <div
-              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-            >
+        <!-- Icônes à droite -->
+        <div class="flex items-center space-x-2">
+          <!-- Icône recherche mobile -->
+          <button class="block md:hidden p-2 rounded-full hover:bg-gray-100">
+            <i data-lucide="search" class="w-5 h-5 text-gray-600"></i>
+          </button>
+
+          <!-- Champ de recherche -->
+          <div class="hidden md:block flex-1 md:flex-none relative cursor-pointer">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
               <i data-lucide="search" class="text-gray-400 w-4 h-4"></i>
             </div>
-            <input
-              type="text"
-              class="block w-72 ps-10 py-2 text-sm text-gray-900 border rounded-sm border-gray-200 bg-white shadow focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Rechercher une ville"
-            />
+            <input type="text" class="block w-full md:w-72 ps-10 py-2 text-sm text-gray-900 border rounded-sm border-gray-200 bg-white shadow focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Rechercher une ville"/>
           </div>
 
-          <!-- Icône -->
+          <!-- Icône paramètres -->
           <button class="p-2 rounded-full hover:bg-gray-100 cursor-pointer">
             <i data-lucide="settings" class="w-5 h-5 text-gray-600"></i>
           </button>
         </div>
       </div>
     </nav>
+ 
+    <main class="max-w-screen-xl mx-auto p-4 pt-8">
+      <!-- Première partie : Première card -->
+      <div class="w-full flex rounded-xl p-5 bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
+        <div class="w-[90%]">
+          <p class="text-xl ps-8">Paris, France</p>
+          <p class="text-sm t ps-8 pt-3">Merci, 16 décembre 2024</p>
 
     <div class="max-w-screen-xl mx-auto p-4 pt-8">
       <!-- Première card -->
@@ -58,22 +66,82 @@
             </div>
           </div>
         </div>
-        <div class="w-[30%] md:w-[10%] text-center flex flex-col mx-auto">
-          <i
-            data-lucide="sun-medium"
-            class="w-20 h-20 text-center mx-auto text-yellow-300 fill-yellow-300"
-          ></i>
+        <div class="w-[10%] text-center flex flex-col mx-auto">
+          <i data-lucide="sun-medium" class="w-20 h-20 text-center mx-auto text-yellow-300 fill-yellow-300"></i>
           <p class="text-xs pt-3 ps-6">Max: 26°</p>
           <p class="text-xs ps-6">Min: 18°</p>
         </div>
       </div>
 
-      <!-- Seconde card -->
-      <div></div>
+      <!-- Seconde partie : Contient les 4 cards alignées -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-8">
+        
+        <!-- Card 1 : Indice UV -->
+        <div class="bg-white rounded-xl shadow-sm p-4">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-sm font-medium text-gray-700">Indice UV</h3>
+            <i data-lucide="sun" class="w-4 h-4 text-orange-500"></i>
+          </div>
 
-      <!-- Troisième -->
-      <div class="grid grid-cols-12 grid-rows-6 gap-0 md:gap-4 pt-8">
-<!-- <div class="grid grid-cols-12 md:grid-cols-12 gap-4 pt-8"> -->
+          <p class="text-2xl font-bold text-gray-900">7</p>
+
+          <div class="w-full h-2 mt-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full bg-orange-500 w-[70%]"></div>
+          </div>
+
+          <p class="text-sm text-gray-500 mt-1">Élevé</p>
+        </div>
+
+        <!-- Card 2 : Humidité -->
+        <div class="bg-white rounded-xl shadow-sm p-4">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-sm font-medium text-gray-700">Humidité</h3>
+            <i data-lucide="waves" class="w-4 h-4 text-blue-500"></i>
+          </div>
+
+          <p class="text-2xl font-bold text-gray-900">68%</p>
+
+          <div class="w-full h-2 mt-2 bg-gray-200 rounded-full overflow-hidden">
+            <div class="h-full bg-blue-500 w-[68%]"></div>
+          </div>
+
+          <p class="text-sm text-gray-500 mt-1">Normal</p>
+        </div>
+
+        <!-- Card 3 : Vent -->
+        <div class="bg-white rounded-xl shadow-sm p-4">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-sm font-medium text-gray-700">Vent</h3>
+            <i data-lucide="arrow-up" class="w-4 h-4 text-gray-500"></i>
+          </div>
+
+          <p class="text-2xl font-bold text-gray-900">12</p>
+          <p class="text-sm text-gray-600">km/h Nord-Est</p>
+
+          <div class="w-8 h-8 mt-3 flex items-center justify-center bg-gray-100 rounded-full">
+            <i data-lucide="arrow-down-right" class="w-4 h-4 text-gray-600"></i>
+          </div>
+        </div>
+
+        <!-- Card 4 : Pression -->
+        <div class="bg-white rounded-xl shadow-sm p-4">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-sm font-medium text-gray-700">Pression</h3>
+            <i data-lucide="package" class="w-4 h-4 text-purple-600"></i>
+          </div>
+
+          <p class="text-2xl font-bold text-gray-900">1013</p>
+          <p class="text-sm text-gray-600">hPa</p>
+
+          <p class="text-sm text-green-600 mt-1">
+            <i data-lucide="chevron-up" class="inline w-3 h-3 align-text-bottom"></i>
+            Stable
+          </p>
+        </div>
+      </div>
+
+      <!-- Troisième partie : Contient deux cards (Prévisions et Température)-->
+      <div class="grid grid-cols-12 md:grid-rows-6 gap-0 md:gap-4 pt-8">
 
         <div class="col-span-12 md:col-span-8 row-span-5 bg-white rounded-xl p-3">
           <p class="text-sm font-bold ps-4">Prévisions 7 jours</p><br>
@@ -134,10 +202,89 @@
             </div>
             <!-- End Row -->
         </div>
-        <div class="col-span-12 md:col-span-4 row-span-6 col-start-9 bg-white">5</div>
+        
+        <div class="col-span-12 md:col-span-4 md:row-span-6 md:col-start-9 bg-white rounded-xl mt-4 md:mt-0">
+          <div class="bg-white rounded-xl shadow-sm p-4 self-start">
+            <h3 class="text-md font-semibold text-gray-800 mb-4">Température (24h)</h3>
+
+            <!-- Barres horaires -->
+            <div class="flex items-end justify-between space-x-1 h-32 mb-6">
+              <div class="flex flex-col items-center">
+                <div class="w-3 h-16 bg-gradient-to-t from-blue-400 to-blue-200 rounded"></div>
+                <span class="text-xs text-gray-600 mt-1">00h</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="w-3 h-14 bg-gradient-to-t from-blue-400 to-blue-200 rounded"></div>
+                <span class="text-xs text-gray-600 mt-1">03h</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="w-3 h-12 bg-gradient-to-t from-blue-400 to-blue-200 rounded"></div>
+                <span class="text-xs text-gray-600 mt-1">06h</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="w-3 h-20 bg-gradient-to-t from-orange-400 to-yellow-300 rounded"></div>
+                <span class="text-xs text-gray-600 mt-1">09h</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="w-3 h-24 bg-gradient-to-t from-red-400 to-orange-300 rounded"></div>
+                <span class="text-xs text-gray-600 mt-1">12h</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="w-3 h-24 bg-gradient-to-t from-red-400 to-orange-300 rounded"></div>
+                <span class="text-xs text-gray-600 mt-1">15h</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="w-3 h-20 bg-gradient-to-t from-orange-400 to-yellow-300 rounded"></div>
+                <span class="text-xs text-gray-600 mt-1">18h</span>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="w-3 h-16 bg-gradient-to-t from-blue-400 to-blue-200 rounded"></div>
+                <span class="text-xs text-gray-600 mt-1">21h</span>
+              </div>
+            </div>
+
+            <!-- Qualité de l’air -->
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">Qualité de l’air</h4>
+            <div class="flex justify-between items-center text-sm mb-1">
+              <span>AQI</span>
+              <span class="font-semibold text-green-600">42</span>
+            </div>
+
+            <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden mb-1">
+              <div class="h-full bg-green-500 w-[42%]"></div>
+            </div>
+
+            <p class="text-sm text-green-600 mb-4">Bonne</p>
+
+            <!-- Soleil -->
+            <h4 class="text-sm font-semibold text-gray-800 mb-1">Soleil</h4>
+            <div class="flex items-center justify-between text-sm text-gray-700">
+              <div class="flex items-center gap-1">
+                <i data-lucide="sunrise" class="w-4 h-4 text-orange-400"></i> Lever
+              </div>
+              <span>07:42</span>
+            </div>
+
+            <div class="flex items-center justify-between text-sm text-gray-700 mt-1">
+              <div class="flex items-center gap-1">
+                <i data-lucide="sunset" class="w-4 h-4 text-orange-400"></i> Coucher
+              </div>
+              <span>17:23</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Last -->
+      <div></div>
+    </main>
       <div class="bg-white rounded-xl w-[100%] p-3 mt-8">
         <p class="text-sm font-bold py-4 ps-4">Carte météo</p>
         <div class="w-[100%] bg-blue-200 p-10 rounded-xl flex flex-col mx-auto text-center relative">
