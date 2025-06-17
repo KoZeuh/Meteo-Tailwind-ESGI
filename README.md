@@ -33,8 +33,7 @@
 
 ## Introduction
 
-[![Build Status](https://img.shields.io/travis/gitpoint/git-point.svg?style=flat-square)](https://travis-ci.org/KoZeuh/Meteo-Tailwind-ESGI)
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](./CONTRIBUTORS.md)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](./CONTRIBUTORS.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Gitter chat](https://img.shields.io/badge/chat-on_gitter-008080.svg?style=flat-square)](https://gitter.im/Meteo-Tailwind-ESGI)
 
@@ -43,7 +42,7 @@
 <details>
   <summary><strong>➡️ View</strong></summary>
   <br/>
-  <img align="left" src="previews/home.png" width="280" target="_blank"/>
+  <img src="previews/home.png" width="280" target="_blank"/>
 </details>
 
 ## Feedback
